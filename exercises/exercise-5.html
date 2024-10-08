@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+<style>
+#primary-nav {
+    background-color: black;
+    width: 100%;
+}
+#primary-nav li {
+    display: inline-block;
+}
+#primary-nav a {
+    color:white;
+    font-size: 40px;
+    text-decoration: none;
+    border: solid white 2px;
+    padding: 35px;
+    border-left: none;
+}
+.inner {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75px;
+    min-height: 75px;
+}
+#toggle-nav {
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 1005px) {
+    #primary-nav li {
+        display: grid;
+        grid-template-rows: 0fr;
+        grid-template-columns: 1fr;
+        transition: grid-template-rows 0.5s ease-out;
+    }
+    #toggle-nav {
+    position: absolute;
+    font-size: 40px;
+    top: 0em;
+    right: 0em;
+    display: block;
+    }
+    #primary-nav a {
+    color:white;
+    font-size: 40px;
+    text-decoration: none;
+    border: none;
+    }
+.inner {
+    overflow: hidden;
+}
+body.nav.open #primarynav {
+    grid-template-rows: 1fr;
+}
+}
+</style>
+</head>
+<body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+        <div class="inner">
+            <ul>
+                <li id="item-1"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+            </ul>
+        </div>
+    </nav>
+<main>
+    <h1>Title Goes Here</h1>
+</main>
+<script>
+    window.onload = () => {
+    const toggleNav = document.getElementById("toggle-nav");
+    toggleNav.innerHTML = "&#9776;";
+      // Tell button to do something on click
+      toggleNav.addEventListener("click", () => {
+        // toggle the body's class attribute
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classlist.contains("nav-open")
+        ? "&#x2715"
+        : "&#9776;";
+    });
+    };
+</script>
+</body>
+</html>
