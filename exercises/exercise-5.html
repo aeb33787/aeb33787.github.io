@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5</title>
 <style>
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 1em;
+}
 #primary-nav {
     background-color: black;
     width: 100%;
 }
 #primary-nav li {
+    list-style: none;
     display: inline-block;
 }
 #primary-nav a {
@@ -28,21 +36,27 @@
 }
 #toggle-nav {
     display: none;
-    cursor: pointer;
-}
-@media (max-width: 1005px) {
-    #primary-nav li {
-        display: grid;
-        grid-template-rows: 0fr;
-        grid-template-columns: 1fr;
-        transition: grid-template-rows 0.5s ease-out;
-    }
-    #toggle-nav {
-    position: absolute;
-    font-size: 40px;
     top: 0em;
     right: 0em;
+    width: 90px;
+    height: 75px;
+}
+@media (max-width: 1005px) {
+    #primary-nav {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+    }
+    body.nav-open #primary-nav {
+        grid-template-rows: 1fr;
+    }
+    #primary-nav li {
+        display: block;
+    }
+    #toggle-nav {
     display: block;
+    position: absolute;
+    font-size: 40px;
     }
     #primary-nav a {
     color:white;
@@ -53,14 +67,11 @@
 .inner {
     overflow: hidden;
 }
-body.nav.open #primarynav {
-    grid-template-rows: 1fr;
-}
 }
 </style>
 </head>
-<body>
-    <button id="toggle-nav">&#9776;</button>
+<body class>
+    <button id="toggle-nav"><img id="ellipsis" src="../images/ellipsis.svg" alt="ellipsis"></button>
     <nav id="primary-nav" role="navigation">
         <div class="inner">
             <ul>
@@ -80,16 +91,19 @@ body.nav.open #primarynav {
 </main>
 <script>
     window.onload = () => {
-    const toggleNav = document.getElementById("toggle-nav");
-    toggleNav.innerHTML = "&#9776;";
+      // Reference button by ID
+      const toggleNav = document.getElementById('toggle-nav');
+      const ellipsis = document.createElement('ellipsis');
+      ellipsis.src = "../images/ellipsis.svg";
+      ellipsis.alt = "ellipsis";
       // Tell button to do something on click
-      toggleNav.addEventListener("click", () => {
+      toggleNav.addEventListener('click', () => {
         // toggle the body's class attribute
-        document.body.classList.toggle("nav-open");
-        toggleNav.innerHTML = document.body.classlist.contains("nav-open")
-        ? "&#x2715"
-        : "&#9776;";
-    });
+        document.body.classList.toggle('nav-open');
+        toggleNav.innerHTML = document.body.classList.contains('nav-open')
+          ? '&#x2715'
+          : document.getElementById('ellipsis');
+      });
     };
 </script>
 </body>
