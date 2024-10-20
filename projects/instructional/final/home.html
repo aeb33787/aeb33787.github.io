@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #FFFFEF;
+}
+main {
+    padding: 1em;
+    margin: auto;
+    width: 900px;
+    height: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    width: 900px;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+.col67 {
+    width: 67%;
+    height: auto;
+}
+.col16 {
+    width: 16.6667%;
+    height: auto;
+}
+.nextsteptext {
+    text-align: center;
+}
+h1 {
+    font-size: 55px;
+    font-family: "League Spartan", sans-serif;
+    color: #EC4A4A;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+h2 {
+    font-size: 48px;
+  font-family: "Inria Sans", sans-serif;
+  color: #8D3D3D;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+p {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #332C2C;
+}
+#primary-nav ul{
+    margin: 0;
+}
+#primary-nav {
+    background-color: #4C4040;
+    width: 100%;
+}
+#primary-nav li {
+    list-style: none;
+    display: inline-block;
+}
+#primary-nav a {
+    color:white;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 20px 35px 20px 35px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+.inner {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75px;
+}
+#toggle-nav {
+    display: none;
+    top: 0em;
+    right: 0em;
+    width: 90px;
+    height: 75px;
+}
+@media (max-width: 1005px) {
+    #primary-nav {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+    }
+    body.nav-open #primary-nav {
+        grid-template-rows: 1fr;
+    }
+    #primary-nav li {
+        display: block;
+    }
+    #toggle-nav {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    }
+    #primary-nav a {
+    color:white;
+    font-size: 40px;
+    text-decoration: none;
+    border: none;
+    }
+    .inner {
+    overflow: hidden;
+    }
+    .container {
+    width: 280px;
+    height: auto;
+    margin: auto;
+    display: block;
+    }
+    h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    }
+    h2 {
+    font-size: 26px;
+    }
+    .col67 {
+    width: 100%;
+    height: auto;
+    }
+    .col16 {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    }
+    main {
+    width: auto;
+    }
+    .navbar {
+    height: 75px;
+    background-color: #4C4040;
+    }
+}
+</style>
+</head>
+<body class>
+    <div class="navbar"></div>
+    <button id="toggle-nav"><img id="ellipsis" src="images/ellipsis.svg" alt="ellipsis"></button>
+    <nav id="primary-nav" role="navigation">
+        <div class="inner">
+            <ul>
+                <li id="item-1"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+            </ul>
+        </div>
+    </nav>
+<main>
+    <div class="container container1">
+    <img src="https://placehold.co/900x500" alt="placeholder">
+    </div>
+    <div class="container box2"><h1>Title Goes Here</h1></div>
+    <div class="container box3"><h2>Subtitle Goes Here</h2></div>
+    <div class="container box4">
+        <div class="col67">
+            <p>Just bought your first coffee pot? Turning to caffeine as a quick-fix for your lack of sleep? This at-home brewing guide will teach you how to make the best cup of coffee, simply.</p>
+        </div>
+        <div class="col16">
+            <p class="nextsteptext">Next: Step x</p>
+        </div>
+        <div class="col16">
+            <img src="https://placehold.co/75x75" alt="placeholder">
+        </div>
+    </div>
+</main>
+<script>
+    window.onload = () => {
+    // Reference button by ID
+    const toggleNav = document.getElementById("toggle-nav");
+    const icon = document.getElementById("icon");
+
+    // Tell button to do something on click
+    toggleNav.addEventListener("click", () => {
+      // toggle the body's class attribute
+      document.body.classList.toggle("nav-open");
+
+      icon.src = document.body.classList.contains("nav-open")
+        ? "&#x2715"
+        : "ellipsis.svg";
+    });
+  };
+</script>
+</body>
+</html>
+
