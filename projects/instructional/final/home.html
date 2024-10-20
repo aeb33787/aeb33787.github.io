@@ -38,12 +38,19 @@ img {
     width: 67%;
     height: auto;
 }
-.col16 {
-    width: 16.6667%;
+.col33 {
+    width: 33%;
     height: auto;
 }
 .nextsteptext {
-    text-align: center;
+    text-align: left;
+    margin: auto;
+}
+.nextstep {
+    float: right;
+}
+.stepbutton {
+    display: flex;
 }
 h1 {
     font-size: 55px;
@@ -143,10 +150,9 @@ p {
     width: 100%;
     height: auto;
     }
-    .col16 {
+    .col33 {
     width: 100%;
-    height: auto;
-    left: 50%;
+    margin: auto;
     }
     main {
     width: auto;
@@ -158,26 +164,26 @@ p {
 }
 </style>
 </head>
-<body class>
+<body id="home">
     <div class="navbar"></div>
     <button id="toggle-nav"><img id="ellipsis" src="images/ellipsis.svg" alt="ellipsis"></button>
     <nav id="primary-nav" role="navigation">
         <div class="inner">
-            <ul>
-                <li id="item-1"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
+            <ul id="mynav">
+                <li><a href="step1.html">1</a></li>
+                <li><a href="step2.html">2</a></li>
+                <li><a href="step3.html">3</a></li>
+                <li><a href="step4.html">4</a></li>
+                <li><a href="step5.html">5</a></li>
+                <li><a href="step6.html">6</a></li>
+                <li><a href="step7.html">7</a></li>
+                <li><a href="step8.html">8</a></li>
             </ul>
         </div>
     </nav>
 <main>
-    <div class="container container1">
-    <img src="https://placehold.co/900x500" alt="placeholder">
+    <div class="container box1">
+    <img class="photography" src="https://placehold.co/900x500" alt="placeholder">
     </div>
     <div class="container box2"><h1>Title Goes Here</h1></div>
     <div class="container box3"><h2>Subtitle Goes Here</h2></div>
@@ -185,11 +191,11 @@ p {
         <div class="col67">
             <p>Just bought your first coffee pot? Turning to caffeine as a quick-fix for your lack of sleep? This at-home brewing guide will teach you how to make the best cup of coffee, simply.</p>
         </div>
-        <div class="col16">
-            <p class="nextsteptext">Next: Step x</p>
-        </div>
-        <div class="col16">
-            <img src="https://placehold.co/75x75" alt="placeholder">
+        <div class="col33">
+            <div class="stepbutton">
+                <p class="nextsteptext">Next: Step x</p>
+                <img class="nextstep" src="https://placehold.co/75x75" alt="placeholder">
+            </div>
         </div>
     </div>
 </main>
@@ -212,4 +218,3 @@ p {
 </script>
 </body>
 </html>
-

@@ -1,0 +1,10 @@
+body#home #mynav li:nth-child(1),
+body#home #mynav li:nth-child(2),
+body#home #mynav li:nth-child(3),
+body#home #mynav li:nth-child(4),
+body#home #mynav li:nth-child(5),
+body#home #mynav li:nth-child(6),
+body#home #mynav li:nth-child(7),
+body#home #mynav li:nth-child(8)
+{background-color: white;
+color:#EC4A4A}
