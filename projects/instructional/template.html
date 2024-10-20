@@ -15,6 +15,10 @@ main {
     width: 900px;
     height: auto;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 .container1 {
     width: 900px;
     height: auto;
@@ -165,6 +169,22 @@ p {
           : document.getElementById('ellipsis');
       });
     };
+
+    window.onload = () => {
+        // Reference button by ID
+        const toggleNav = document.getElementById("toggle-nav");
+        const icon = document.getElementById("icon");
+
+        // Tell button to do something on click
+        toggleNav.addEventListener("click", () => {
+          // toggle the body's class attribute
+          document.body.classList.toggle("nav-open");
+
+          icon.src = document.body.classList.contains("nav-open")
+            ? "addbox.svg"
+            : "chevron.svg";
+        });
+      };
 </script>
 </body>
 </html>
