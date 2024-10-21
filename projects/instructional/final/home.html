@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 5</title>
+    <title>How to Make a Cup of Coffee</title>
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/mug-favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/mugappletouch.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +57,16 @@ img {
     height: auto;
     position: absolute;
     display: flex;
+}
+.next-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 222px;
+}
+.right-arrow {
+    width: 75px;
+    height: auto;
 }
 h1 {
     font-size: 55px;
@@ -184,6 +198,8 @@ p {
     .col33 {
     width: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
     }
     main {
     width: auto;
@@ -193,14 +209,22 @@ p {
     background-color: #4C4040;
     }
     .steptext {
-    display: none;
+        display: none;
     }
+    .next-button {
+        width: 100%;
+        margin: auto;
+    }
+    .right-arrow {
+        width: 44px;
+        height: auto;
+}
 }
 </style>
 </head>
 <body id="home">
     <div class="navbar">
-        <button class="home-button"><img src="../images/home-icon_instr_new.svg" alt="home"></button>
+        <a href="home.html"><button class="home-button"><img src="../images/home-icon_instr_new.svg" alt="home"></button></a>
         <div class="steptext"><h3>Steps</h3></div>
     </div>
     <button id="toggle-nav">&#8230;</button>
@@ -220,17 +244,17 @@ p {
     </nav>
 <main>
     <div class="container box1">
-    <img class="photography" src="https://placehold.co/900x500" alt="placeholder">
+    <img class="photography" src="../images/home_instr01_rsdesk.webp" alt="photography">
     </div>
-    <div class="container box2"><h1>Title Goes Here</h1></div>
-    <div class="container box3"><h2>Subtitle Goes Here</h2></div>
+    <div class="container box2"><h1>How to Make a Cup of Coffee</h1></div>
+    <div class="container box3"><h2>A Step-by-Step Brewing Guide</h2></div>
     <div class="container box4">
         <div class="col67">
             <p>Just bought your first coffee pot? Turning to caffeine as a quick-fix for your lack of sleep? This at-home brewing guide will teach you how to make the best cup of coffee, simply.</p>
         </div>
         <div class="col33">
             <div class="stepbutton">
-                <button class="next-button"><img src="arrow-right.svg" alt="next-button"></button>
+                <a href="step1.html"><button class="next-button"><img class= "right-arrow" src="../images/arrow-right.svg" alt="next-button"></button></a>
             </div>
         </div>
     </div>
