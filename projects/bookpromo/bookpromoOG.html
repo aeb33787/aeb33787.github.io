@@ -1,0 +1,154 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Ramos: The Biography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #160D16;
+      }
+      main {
+        padding: 1em;
+      }
+      .infoblock1{
+        display: flex;
+        margin: auto;
+        width: 700px;
+        height: auto;
+      }
+      .col50 {
+        display: flex;
+        width: 50%;
+        height: auto;
+      }
+      .hairline {
+        color: #F9FCB7;
+        height: 3px;
+        width: auto;
+      }
+      a.redboxlink {
+        border: #D73535 solid 3px;
+      }
+      h1 {
+        margin-bottom: 50px;
+        color: #D73535;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 64px;
+        text-align: center;
+      }
+      #toggle-nav {
+        display: none;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+      }
+      #primary-nav {
+        background-color: #251026;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: #F9FCB7 solid 3px;
+      }
+      #primary-nav li {
+        list-style: none;
+        display: inline-block;
+        align-items: center;
+      }
+      .inner {
+        text-align: center;
+      }
+      .homeicon {
+        display: flex;
+        justify-content: center;
+      }
+      a, p {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .homeicon {
+        padding: 0;
+      }
+      p {
+        color: #F9FCB7;
+      }
+      a {
+        color: #F9FCB7;
+        display: flex;
+        text-decoration: none;
+        padding: 25px 50px 25px 50px;
+      }
+      @media (max-width: 916px) {
+        #primary-nav {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.5s ease-out;
+        }
+        #primary-nav li {
+          display: block;
+        }
+        body.nav-open #primary-nav {
+          grid-template-rows: 1fr;
+        }
+        .inner {
+          overflow: hidden;
+        }
+        #toggle-nav {
+          display: block; /* display button beneath breakpoint */
+        }
+      }
+    </style>
+  </head>
+  <body class="">
+    <button id="toggle-nav">☰</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+        <li><a href="#" class="homeicon"><img src="https://placehold.co/155x55" alt="homeicon"></a></li>
+          <li><a href="#">LOOK INSIDE</a></li>
+          <li><a href="#">REVIEWS</a></li>
+          <li><a href="#">AUTHOR</a></li>
+          <li><a href="#">PREORDER</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+    <h1>Title Here</h1>
+    <div class="infoblock1">
+        <div class="col50">
+            <img src="https://placehold.co/300x500" alt="bookcover">
+        </div>
+        <div class="col50">
+                <p>
+                    In this compelling biography, delve into the life of Will Ramos, the dynamic vocalist of the metalcore band Lorna Shore. This book chronicles his journey from a young music enthusiast to a defining voice in the metal scene. Highlighting his pivotal moments, including his rise to prominence with Lorna Shore, the biography explores Will’s unique blend of technical skill and emotional depth that resonates with fans worldwide. This is not just a story of musical achievement; it’s a testament to the power of passion, perseverance, and the universal language of music.
+                </p>
+        </div>
+    </div>
+    <div class="hairline"></div>
+    </main>
+  
+  <script>
+    // Perform this after the window has loaded
+    window.onload = () => {
+      // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+      const toggleNav = document.getElementById('toggle-nav');
+      toggleNav.innerHTML = '&#9776;';
+
+      // Tell button to do something on click
+      toggleNav.addEventListener('click', () => {
+        // toggle the body's class attribute
+        document.body.classList.toggle('nav-open');
+        toggleNav.innerHTML = document.body.classList.contains('nav-open')
+          ? '&#x2715'
+          : '&#9776;';
+      });
+    };
+  </script>
+
+</body></html>
