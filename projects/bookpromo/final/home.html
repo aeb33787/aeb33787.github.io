@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will Ramos: The Biography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="bookstyles.css">
+  </head>
+  <body>
+    <button id="toggle-nav">☰</button>
+    <header>
+      <div class="flex">
+        <div id="logo"><a ref="home.html"><img src="https://placehold.co/150x100" alt="homeicon"></a></div>
+        <nav id="primary-nav">
+          <div class="inner">
+            <ul>
+              <li><a href="look-inside.html">Look Inside</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="author.html">Author</a></li>
+              <li><a href="preorder.html">Preorder</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Title Here</h1>
+      <div class="infoblock1">
+        <div class="col50">
+          <img src="https://placehold.co/300x500" alt="bookcover">
+        </div>
+        <div class="col50">
+          <p>
+            In this compelling biography, delve into the life of Will Ramos, the
+            dynamic vocalist of the metalcore band Lorna Shore. This book
+            chronicles his journey from a young music enthusiast to a defining
+            voice in the metal scene. Highlighting his pivotal moments,
+            including his rise to prominence with Lorna Shore, the biography
+            explores Will’s unique blend of technical skill and emotional depth
+            that resonates with fans worldwide. This is not just a story of
+            musical achievement; it’s a testament to the power of passion,
+            perseverance, and the universal language of music.
+          </p>
+          <a href="look-inside.html" class="redboxlink">Look Inside</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Perform this after the window has loaded
+      window.onload = () => {
+        // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        // Tell button to do something on click
+        toggleNav.addEventListener("click", () => {
+          // toggle the body's class attribute
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

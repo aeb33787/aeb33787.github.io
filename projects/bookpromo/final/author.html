@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will Ramos: The Biography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="bookstyles.css">
+    <style>
+        body #primary-nav li:nth-child(3) {
+        border-bottom: #f9fcb7 solid 3px;
+        }
+        body #primary-nav li:nth-child(3) a {
+        color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="toggle-nav">☰</button>
+    <header>
+      <div class="flex">
+        <div id="logo"><img src="https://placehold.co/150x100" alt="homeicon"></div>
+        <nav id="primary-nav">
+          <div class="inner">
+            <ul>
+              <li><a href="look-inside.html">Look Inside</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="author.html">Author</a></li>
+              <li><a href="preorder.html">Preorder</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Meet the Author</h1>
+      <div class="infoblock1">
+        <div class="col50">
+          <img src="https://placehold.co/300x500" alt="bookcover">
+        </div>
+        <div class="col50">
+          <p>
+            Jane Doe is a passionate music journalist and author dedicated to exploring the lives and stories of musicians across a variety of genres. She is the author of several acclaimed books, including Voices of the Underground, Rhythms of Resilience, and Legends of Sound: The Untold Stories of Music Icons. Through her writing, she seeks to illuminate the passion, struggles, and creativity that define the music world, making it accessible and relatable to readers everywhere.
+          </p>
+          <a href="#" class="redboxlink">See Latest Works</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Perform this after the window has loaded
+      window.onload = () => {
+        // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        // Tell button to do something on click
+        toggleNav.addEventListener("click", () => {
+          // toggle the body's class attribute
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>
