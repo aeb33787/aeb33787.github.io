@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #160d16;
+    background-image: url(./images/background-image-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: auto;
   }
   main {
     padding: 1em;
@@ -92,6 +95,13 @@ body {
   .flex {
     display: flex;
   }
+  #logo {
+    width: 150px;
+    height: 100px;
+  }
+  .homeicon {
+    cursor: pointer
+  }
   @media (max-width: 875px) {
     main {
       margin: auto;
@@ -124,7 +134,9 @@ body {
     }
     #logo {
       text-align: center;
-      width: 100%;
+      width: 150px;
+      height: 100px;
+      margin: auto;
     }
     .flex {
       flex-direction: column;
@@ -133,6 +145,9 @@ body {
       width: 250px;
       height: auto;
       flex-direction: column;
+    }
+    h1 {
+      font-size: 36px;
     }
     .col50 {
       width: 100%;
