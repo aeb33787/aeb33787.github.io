@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brews & Bonds Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+   
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="stylesheet" href="templatestyles.css">
+  </head>
+  <body>
+    <button id="toggle-nav">☰</button>
+    <header>
+      <div class="flex">
+        <div id="logo"><a class="homeicon" href="index.html"><img src="https://placehold.co/150x75" alt="placeholder"></a></div>
+        <nav id="primary-nav">
+          <div class="inner">
+            <ul>
+              <li><a href="#">Look Inside</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Author</a></li>
+              <li><a href="#">Preorder</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+    <div class="hero-banner">
+        <img src="https://placehold.co/650x450" alt="placeholder">
+    </div>
+    <div class="content-850">
+        <h2>A</h2><h1> Safe Haven </h1><h2> in the </h2>
+    </div>
+    <div class="content-850">
+        <h1>Heart</h1><h2> of </h2><h1><i>Harrisburg</i></h1>
+    </div>
+    <div class="content-850">
+        <h3>Good Coffee & Good Company</h3>
+        <p>Every drink is a reflection of Jacob and Emily's journey—one brewed with love, dedication, and an unwavering belief that coffee has the power to bring people together.</p>
+    </div>
+        <div class="info-banner">
+            <div class="content-850-flex">
+            <div class="col50"><img src="https://placehold.co/400x400" alt="placeholder"></div>
+            <div class="col50"><img src="https://placehold.co/400x400" alt="placeholder"></div>
+        </div>
+    </div>
+    </main>
+    <script>
+      // Perform this after the window has loaded
+      window.onload = () => {
+        // First, tell JavaScript to remember which DOM element (in this case, a button) to reference (by id)
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        // Tell button to do something on click
+        toggleNav.addEventListener("click", () => {
+          // toggle the body's class attribute
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>
