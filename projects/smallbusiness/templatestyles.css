@@ -11,7 +11,7 @@ body {
     height: auto;
     background-color: #8494B6;
   }
-  .content-850, .content-850-flex {
+  .content-850-head, .content-850, .content-850-subhead, .content-850-flex {
     width: 850px;
     margin: auto;
     justify-content: center;
@@ -19,6 +19,20 @@ body {
   }
   .content-850-flex {
     display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .content-850-head {
+    margin-top: 50px;
+  }
+  .content-850-subhead {
+    margin-bottom: 50px;
+  }
+  .explore-link {
+    background-color: #12203e;
+    padding: 25px;
+    text-decoration: none;
+    margin-top: 25px;
   }
   .col50 {
     display: flex;
@@ -29,7 +43,7 @@ body {
     column-gap: 50px;
     align-items: center;
   }
-  h1, h2{
+  h1, h2 {
     font-family: "DM Serif Text", serif;
     font-style: normal;
     color: #95542A;
