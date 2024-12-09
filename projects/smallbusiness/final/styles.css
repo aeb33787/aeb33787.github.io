@@ -1,3 +1,10 @@
+img {
+  width: 100%;
+  height: auto;
+}
+.explore-img {
+  max-width: 400px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -11,22 +18,31 @@ body {
     height: auto;
     background-color: #8494B6;
   }
-  .content-850-head, .content-850, .content-850-subhead, .content-850-flex {
+  .content-850-head, .content-850, .content-850-subhead, .content-850-flex, .content-850-par, .content-850-par-alt {
     width: 850px;
     margin: auto;
     justify-content: center;
-    text-align: center;
   }
+  .content-850-par, .content-850-par-alt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .content-850-par-alt {
+    margin-top: 50px;
+    gap: 50px;
+  }
+.content-850-head, .content-850, .content-850-subhead, .content-850-flex {
+    text-align: center;
+}
   .content-850-flex {
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .content-850-head {
+  .content-850-head, .content-850-subhead {
     margin-top: 50px;
-  }
-  .content-850-subhead {
-    margin-bottom: 50px;
   }
   .explore-link {
     background-color: #12203e;
@@ -34,28 +50,41 @@ body {
     text-decoration: none;
     margin-top: 25px;
   }
-  .col50 {
+  .col50, .col50-explore, .col50-leftalign {
     display: flex;
     flex-direction: column;
     width: 50%;
     height: auto;
     position: relative;
-    column-gap: 50px;
+    box-sizing: border-box;
+    flex: 1 1 calc(50% - 25px);
+  }
+  .col50, .col50-explore {
     align-items: center;
+  }
+  .col50-leftalign {
+    align-items: left;
   }
   h1, h2 {
     font-family: "DM Serif Text", serif;
     font-style: normal;
-    color: #95542A;
     text-align: center;
     font-weight: 400;
-    display: inline;
   }
-  h1 {
+    h1, h2 {
+    display: inline;
+    color: #95542A;
+    }
+  h1, h4 {
     font-size: 64px;
   }
   h2 {
     font-size: 40px;
+  }
+  h4 {
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
   #toggle-nav {
     display: none;
@@ -68,8 +97,9 @@ body {
     border-bottom: #95542A solid 20px;
   }
   header > .flex {
-    max-width: 916px;
+    max-width: 905px;
     margin: 0 auto;
+    align-items: center;
   }
   #primary-nav ul {
     padding: 0;
@@ -88,25 +118,53 @@ body {
     padding: 0;
     margin-top: 15px;
   }
- a, p, h3 {
+ a, p, h3, li {
     font-family: "Libre Franklin", sans-serif;
     font-style: normal;
   }
   h3 {
-    font-weight: 100px;
-    font-weight: normal;
+    font-weight: 100;
     font-size: 48px;
   }
-  a, p {
-    font-weight: 400px;
+  li {
+    list-style: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .menu-item, .emphasis-orange-bold {
+    text-transform: uppercase;
+    color: #95542A;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+  .item-descr {
+    margin-bottom: 25px;
+  }
+  .list-thin {
+    font-weight: 100;
+    display: inline;
+    text-transform: uppercase;
+  }
+.emphasis-orange-bold, .p-inline {
+display: inline;
+}
+  a, p, li {
     font-size: 20px;
   }
-    a {
+  p {
+    font-weight: 400;
+  }
+  a {
         color: #EBE1BB;
-        font-style: bold;
+        font-weight: 500;
     }
-    p, h3 {
+    p, h3, li {
         color: #000000;
+    }
+    p, .menu-item, .item-descr {
+      line-height: 32px;
     }
   #primary-nav a {
     display: inline-block;
@@ -162,21 +220,38 @@ body {
     .flex {
       flex-direction: column;
     }
-    .infoblock1 {
+    .content-850-head, .content-850, .content-850-subhead, .content-850-flex, .content-850-par, .content-850-par-alt {
       width: 250px;
       height: auto;
       flex-direction: column;
     }
-    h1 {
-      font-size: 36px;
+    h1, h1 > i {
+      font-size: 44px;
     }
-    .col50 {
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+    h4 {
+      font-size: 44px;
+    }
+    .col50, .col50-explore {
       width: 100%;
+      display: block;
+      margin: auto;
     }
-    .col50 > p {
-      padding-bottom: 50px;
+    .col50-explore {
+      margin-bottom: 50px;
     }
     .redboxlink {
       position: static;
+    }
+    .explore-img {
+      margin-bottom: 50px;
+    }
+    .col50-leftalign {
+      width: 100%;
     }
 }

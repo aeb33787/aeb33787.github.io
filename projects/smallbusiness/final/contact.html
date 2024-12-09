@@ -11,16 +11,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
+   
     <link rel="shortcut icon" href="../images/brews-bonds-favicon-01.svg" type="image/x-icon">
     <link rel="icon" href="../images/brews-bonds-favicon-01.svg" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/brews-bonds-apple-touch-01.svg">
     <link rel="stylesheet" href="styles.css">
     <style>
-      p {
-        margin-bottom: 50px;
-      }
-    </style>
+        body #primary-nav li:nth-child(4) {
+          background-color: #8494B6;
+          padding-top: 12.735px;
+          padding-bottom: 12.735px;
+          }
+        p {
+            line-height: 20px;
+            margin-bottom: 50px;
+        }
+          @media (max-width: 875px) {
+        body #primary-nav li:nth-child(4) {
+          background-color: #8494B6;
+          padding: 0;
+          }
+        h3 {
+            margin-top: 25px;
+        }
+        }
+      </style>
   </head>
   <body>
     <button id="toggle-nav">☰</button>
@@ -41,27 +56,21 @@
     </header>
     <main>
     <div class="hero-banner">
-      <div class="content-850"><img src="../images/hero-image.webp" alt="placeholder"></div>
-    </div>
-    <div class="content-850-head">
-        <h2>A</h2><h1> Safe Haven </h1><h2> in the </h2>
-    </div>
-    <div class="content-850">
-        <h1>Heart</h1><h2> of </h2><h1><i>Harrisburg</i></h1>
+        <h4>Contact Us</h4>
     </div>
     <div class="content-850-subhead">
-        <h3>Good Coffee & Good Company</h3>
-        <p>Every drink is a reflection of Jacob and Emily's journey—one brewed with love, dedication, and an unwavering belief that coffee has the power to bring people together.</p>
-    </div>
-        <div class="info-banner">
-            <div class="content-850-flex">
-            <div class="col50-explore"><img class="explore-img" src="../images/cup.webp" alt="placeholder">
-              <a class="explore-link" href="coffee-&-more.html">Explore Menu</a>
-            </div>
-            <div class="col50-explore"><img class="explore-img" src="../images/mug.webp" alt="placeholder">
-              <a class="explore-link" href="events.html">Explore Events</a>
-            </div>
-        </div>
+    <img src="../images/beans.webp" alt="beans"></img>
+    <h3>Brews & Bonds Coffee</h3>
+    <div class="content-850">
+        <ul>
+            <li class="menu-item">Phone:</li>
+            <li class="item-descr">(717) 555-0198</li>
+            <li class="menu-item">Email:</li>
+            <li class="item-descr">bb@brewsandbonds.com</li>
+            <li class="menu-item">Find Us At:</li>
+            <li class="item-descr"><p>234 Coffee Lane, Harrisburg, PA 17101</p><p>(Located in the heart of downtown, near the riverfront park)</p></li>
+        </ul>
+    <img src="../images/beans.webp" alt="beans"></img>
     </div>
     </main>
     <script src="script.js"></script>
