@@ -18,6 +18,9 @@ body {
     height: auto;
     background-color: #8494B6;
   }
+  .hero-image {
+    max-width: 676px;
+  }
   .content-850-head, .content-850, .content-850-subhead, .content-850-flex, .content-850-par, .content-850-par-alt {
     width: 850px;
     margin: auto;
